@@ -1,0 +1,12 @@
+node_modules
+.browserslistrc
+.gitignore
+.prettierrc
+pnpm-lock.yaml
+package.json
+README.md
+webpack.config.js
+dist
+tailwind.css
+tailwind.output.css
+build
