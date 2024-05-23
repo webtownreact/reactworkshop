@@ -4,9 +4,9 @@ import { todos as defaultTodos } from '../consts/todo.const';
 import { TodoItemComponent } from './todo-item.components';
 
 export const TodoComponent = () => {
-  const [todos, setTodos] = useState(defaultTodos);
+  const [todos, setTodos] = useState<ITodo[]>(defaultTodos);
 
-  const completeTodo = (id: number) => {
+  const completeTodo: (id: number) => void = (id: number) => {
     setTodos(
       todos.map((iTodo: ITodo) => {
         if (id === iTodo.id) {
@@ -21,7 +21,7 @@ export const TodoComponent = () => {
     );
   };
 
-  const unCompleteTodo = (id: number) => {
+  const unCompleteTodo: (id: number) => void = (id: number) => {
     setTodos(
       todos.map((iTodo: ITodo) => {
         if (id === iTodo.id) {
@@ -34,6 +34,10 @@ export const TodoComponent = () => {
         return iTodo;
       }),
     );
+  };
+
+  const deleteTodo: (id: number) => void = (id: number) => {
+    setTodos(todos.filter((iTodo: ITodo) => iTodo.id !== id));
   };
 
   return (
@@ -50,7 +54,12 @@ export const TodoComponent = () => {
 
       {todos.map((iTodo: ITodo) => (
         <div key={iTodo.id}>
-          <TodoItemComponent iTodo={iTodo} completeTodo={completeTodo} unCompleteTodo={unCompleteTodo} />
+          <TodoItemComponent
+            iTodo={iTodo}
+            completeTodo={completeTodo}
+            unCompleteTodo={unCompleteTodo}
+            deleteTodo={deleteTodo}
+          />
         </div>
       ))}
     </main>
