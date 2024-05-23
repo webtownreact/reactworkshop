@@ -21,12 +21,15 @@ module.exports = (env) => {
           exclude: /node_modules/,
         },
         {
-          test: /\.(css)$/i,
+          test: /\.(css|pcss)$/i,
           use: [
             isProductionMode ? MiniCssExtractPlugin.loader : 'style-loader',
             {
               loader: 'css-loader',
               options: { importLoaders: 1 },
+            },
+            {
+              loader: 'postcss-loader',
             },
           ],
         },
