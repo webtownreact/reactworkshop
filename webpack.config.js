@@ -6,7 +6,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 module.exports = (env) => {
   const isProductionMode = env.production;
   return {
-    entry: './index.ts',
+    entry: './index.tsx',
     mode: isProductionMode ? 'production' : 'development',
     output: {
       filename: '[name].[contenthash].js',
@@ -50,6 +50,9 @@ module.exports = (env) => {
       }),
       new WebpackManifestPlugin(),
     ],
+    resolve: {
+      extensions: [".tsx", ".ts", ".js"],
+    },
     devServer: {
       static: path.resolve(__dirname, 'dist'),
       open: true,

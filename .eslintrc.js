@@ -6,12 +6,13 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   extends: [
+    'plugin:react/recommended',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
