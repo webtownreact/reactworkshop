@@ -1,9 +1,15 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { RouterPath } from '../../core/enums/router-path.enum';
 
-export const AComponent = () => {
+export const Component = () => {
   const navigate = useNavigate();
+  const params = useParams();
+  console.log(params.id);
+
+  const [searchParams] = useSearchParams();
+
+  console.log(searchParams);
 
   const navigateToB: () => void = () => {
     navigate(`/${RouterPath.b}`);

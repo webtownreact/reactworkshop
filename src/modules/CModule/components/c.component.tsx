@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const CComponent = () => {
+export const Component = () => {
   return <div>CComponent</div>;
 };

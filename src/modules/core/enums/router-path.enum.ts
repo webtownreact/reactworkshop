@@ -5,4 +5,6 @@ export enum RouterPath {
   todo = 'todo',
   id = ':id',
   notFound = '*',
+  skeleton = 'skeleton',
+  slash = '/',
 }
