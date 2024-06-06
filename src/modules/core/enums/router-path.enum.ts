@@ -8,4 +8,7 @@ export enum RouterPath {
   skeleton = 'skeleton',
   slash = '/',
   e = 'e',
+  f = 'f',
+  g = 'g',
+  h = 'h',
 }

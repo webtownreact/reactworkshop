@@ -39,6 +39,18 @@ export const router = createHashRouter(
           path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.e}`}
           lazy={() => import('../../Emodule/e.component')}
         ></Route>
+        <Route
+          path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.f}`}
+          lazy={() => import('../../FModule/components/f.component')}
+        ></Route>
+        <Route
+          path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.g}`}
+          lazy={() => import('../../GModule/components/g.component')}
+        ></Route>
+        <Route
+          path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.h}`}
+          lazy={() => import('../../HModule/components/h.component')}
+        ></Route>
       </Route>
 
       <Route path={`${RouterPath.todo}`} element={<TodoComponent></TodoComponent>}></Route>
