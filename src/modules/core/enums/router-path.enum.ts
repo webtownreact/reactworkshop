@@ -7,4 +7,5 @@ export enum RouterPath {
   notFound = '*',
   skeleton = 'skeleton',
   slash = '/',
+  e = 'e',
 }
