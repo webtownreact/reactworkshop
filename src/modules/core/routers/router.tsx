@@ -8,6 +8,7 @@ import { bLoader } from '../../BModule/loaders/b.loader';
 export const router = createHashRouter(
   createRoutesFromElements(
     <>
+      <Route path={`${RouterPath.slash}`} element={<Navigate replace to={`${RouterPath.skeleton}`} />}></Route>
       <Route
         path={`${RouterPath.slash}${RouterPath.skeleton}`}
         lazy={() => import('../../SkeletonModule/components/skeleton.component')}

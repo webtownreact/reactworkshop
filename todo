@@ -13,4 +13,8 @@ validaciokra
 ott tartunk hogy file kezeles kell a transaltionhoz
 
 
+----- ezeket mindenkepp el kellene mondani
+webpack
+- devtool: isProductionMode ? false : 'inline-source-map',
+- filename: isProductionMode ? '[name].[contenthash].js' : '[name]',
 

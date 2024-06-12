@@ -27,6 +27,20 @@ export const Component = () => {
   }, []);
 
   useEffect(() => {
+    const getData = async () => {
+      try {
+        await fetch('/backend/hello');
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getData();
+
+    return () => {};
+  }, []);
+
+  useEffect(() => {
     console.log(isLoading);
   }, [isLoading]);
 

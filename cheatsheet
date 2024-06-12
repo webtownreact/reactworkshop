@@ -1,0 +1,80 @@
+frameworks:
+- htmx - https://github.com/bigskysoftware/htmx
+- alpine - https://github.com/alpinejs/alpine 
+- alpine + tailwind - https://devdojo.com/pines
+- react - https://github.com/facebook/react
+- remix - https://github.com/remix-run/remix
+- gatsby - https://github.com/gatsbyjs/gatsby
+- refine - https://github.com/refinedev/refine
+- qwik - https://github.com/QwikDev/qwik
+- swelte - https://github.com/sveltejs/svelte
+- astro - https://github.com/withastro/astro
+- preact - https://github.com/preactjs/preact
+- solid - https://github.com/solidjs/solid
+- lit - https://github.com/lit/lit
+- nextjs - https://github.com/vercel/next.js
+- redwood - https://github.com/redwoodjs/redwood
+
+form handlig
+- react hook form - https://github.com/react-hook-form/react-hook-form
+- formik - https://github.com/jaredpalmer/formik
+- react-final-form - https://github.com/final-form/react-final-form
+
+translation / i18n
+- react.i18next - https://github.com/i18next/react-i18next
+- react-i18nify - https://github.com/sealninja/react-i18nify
+- js-lingui - https://github.com/lingui/js-lingui
+- formatjs - https://github.com/formatjs/formatjs
+
+form validation libs
+- yup - https://github.com/jquense/yup
+- zod - https://github.com/colinhacks/zod
+- ajv -https://github.com/ajv-validator/ajv
+- joi - https://github.com/hapijs/joi
+- valibot - https://github.com/fabian-hiller/valibot
+
+utilities
+- react-use https://github.com/streamich/react-use
+- floating ui - https://github.com/floating-ui/floating-ui
+
+css libs / widgets
+- headless ui - https://github.com/tailwindlabs/headlessui
+- mui - https://github.com/mui/material-ui
+- bulma - https://github.com/jgthms/bulma
+- foundation - https://github.com/foundation/foundation-sites
+- boostrap - https://github.com/twbs/bootstrap
+- radix - https://github.com/radix-ui/themes
+- tailwind - https://github.com/tailwindlabs/tailwindcss
+- shadcn - https://github.com/shadcn-ui/ui
+- mantine - https://mantine.dev/getting-started/
+
+date handling
+- luxon - https://github.com/moment/luxon
+- date-fns - https://github.com/date-fns/date-fns
+- moment - https://github.com/moment/moment
+
+http handling
+- axios - https://github.com/axios/axios
+- fetch - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+state management
+- redux - https://github.com/reduxjs/redux
+- zustand - https://github.com/pmndrs/zustand
+- jotai - https://github.com/pmndrs/jotai
+- xstate - https://github.com/statelyai/xstate 
+
+build tools
+- webpack - https://github.com/webpack/webpack
+- vite - https://github.com/vitejs/vite
+
+routing
+- react router - https://github.com/remix-run/react-router
+- wouter - https://github.com/molefrog/wouter
+
+runtimes
+- node - https://github.com/nodejs
+- deno - https://github.com/denoland/deno
+- bun - https://github.com/oven-sh/bun
+
+etc
+- best tools of 2023 - https://risingstars.js.org/2023/en

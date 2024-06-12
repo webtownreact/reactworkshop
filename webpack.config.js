@@ -7,6 +7,7 @@ module.exports = (env) => {
   const isProductionMode = env.production;
   return {
     entry: './index.tsx',
+    devtool: isProductionMode ? false : 'inline-source-map',
     mode: isProductionMode ? 'production' : 'development',
     output: {
       filename: '[name].[contenthash].js',
@@ -57,6 +58,15 @@ module.exports = (env) => {
       static: path.resolve(__dirname, 'dist'),
       open: true,
       hot: true,
+      proxy: [
+        {
+          context: ['/backend'],
+          target: 'http://localhost:3000/',
+          secure: false,
+          changeOrigin: true,
+          pathRewrite: { '^/backend': '' },
+        },
+      ],
     },
   }
 }
