@@ -4,11 +4,13 @@ import { RouterPath } from '../enums/router-path.enum';
 import { TodoComponent } from '../components/todo.component';
 import { aLoader } from '../../AModule/loaders/a.loader';
 import { bLoader } from '../../BModule/loaders/b.loader';
+import { AuthGuard } from '../components/auth-guard';
 
 export const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route path={`${RouterPath.slash}`} element={<Navigate replace to={`${RouterPath.skeleton}`} />}></Route>
+
       <Route
         path={`${RouterPath.slash}${RouterPath.skeleton}`}
         lazy={() => import('../../SkeletonModule/components/skeleton.component')}
@@ -54,7 +56,12 @@ export const router = createHashRouter(
         ></Route>
       </Route>
 
-      <Route path={`${RouterPath.todo}`} element={<TodoComponent></TodoComponent>}></Route>
+      <Route path={`${RouterPath.slash}${RouterPath.admin}`} element={<AuthGuard />}>
+        <Route
+          path={`${RouterPath.slash}${RouterPath.admin}/${RouterPath.todo}`}
+          element={<TodoComponent></TodoComponent>}
+        ></Route>
+      </Route>
       <Route path={`${RouterPath.notFound}`} element={<div>this not found</div>}></Route>
     </>,
   ),

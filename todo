@@ -1,20 +1,7 @@
 loader http call servicebe rakasa
 generic component
-
-i18n
-docker
+fileokra a transaltion
+docker pnpm webpack
 reverseproxy
-auth
-
-osszerakni valami cheat sheetet
-state management
-validaciokra
-
-ott tartunk hogy file kezeles kell a transaltionhoz
-
-
------ ezeket mindenkepp el kellene mondani
-webpack
-- devtool: isProductionMode ? false : 'inline-source-map',
-- filename: isProductionMode ? '[name].[contenthash].js' : '[name]',
-
+documentation
+axios typescript

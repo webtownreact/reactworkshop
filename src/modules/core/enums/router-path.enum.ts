@@ -11,4 +11,5 @@ export enum RouterPath {
   f = 'f',
   g = 'g',
   h = 'h',
+  admin = 'admin',
 }

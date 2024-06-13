@@ -1,36 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import { ISdf } from '../../AModule/interfaces/sdf.interface';
-import { IGeneric } from '../interfaces/generic.inteface';
+// import React, { useEffect, useState } from 'react';
+// import { ISdf } from '../../AModule/interfaces/sdf.interface';
+// import { IGeneric } from '../interfaces/generic.inteface';
 
-export const GenericComponent = ({ state, setState, promise }: IGeneric<any>) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+import React from 'react';
 
-  useEffect(() => {
-    setIsLoading(true);
-    const getData = async () => {
-      try {
-        const _sdf: ISdf = await promise;
-        setState(_sdf);
-        setIsLoading(false);
-      } catch (error) {
-        setIsError(true);
-        setIsLoading(false);
-      }
-    };
+// export const GenericComponent = ({ state, setState, promise }: IGeneric<any>) => {
+//   const [isLoading, setIsLoading] = useState(false);
+//   const [isError, setIsError] = useState(false);
 
-    getData();
+//   useEffect(() => {
+//     setIsLoading(true);
+//     const getData = async () => {
+//       try {
+//         const _sdf: ISdf = await promise;
+//         setState(_sdf);
+//         setIsLoading(false);
+//       } catch (error) {
+//         setIsError(true);
+//         setIsLoading(false);
+//       }
+//     };
 
-    return () => {};
-  }, []);
+//     getData();
 
-  if (isLoading) {
-    return <div>Loading</div>;
-  }
+//     return () => {};
+//   }, []);
 
-  if (isError) {
-    return <div>Error</div>;
-  }
+//   if (isLoading) {
+//     return <div>Loading</div>;
+//   }
 
-  return <div>{state}</div>;
+//   if (isError) {
+//     return <div>Error</div>;
+//   }
+
+//   return <div>{state}</div>;
+// };
+
+export const GenericComponent = () => {
+  return <div></div>;
 };

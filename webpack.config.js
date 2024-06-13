@@ -2,6 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CompressionPlugin = require("compression-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = (env) => {
   const isProductionMode = env.production;
@@ -50,6 +53,10 @@ module.exports = (env) => {
         filename: '[name].[contenthash].css',
       }),
       new WebpackManifestPlugin(),
+      // new BundleAnalyzerPlugin(),
+      new CompressionPlugin(),
+      new FaviconsWebpackPlugin('./assets/images/hyperplane.svg'),
+
     ],
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
