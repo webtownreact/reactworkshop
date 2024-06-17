@@ -54,6 +54,10 @@ export const router = createHashRouter(
           path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.h}`}
           lazy={() => import('../../HModule/components/h.component')}
         ></Route>
+        <Route
+          path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.i}`}
+          lazy={() => import('../../IModule/components/i.component')}
+        ></Route>
       </Route>
 
       <Route path={`${RouterPath.slash}${RouterPath.admin}`} element={<AuthGuard />}>

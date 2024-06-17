@@ -1,42 +1,53 @@
-// import React, { useEffect, useState } from 'react';
-// import { ISdf } from '../../AModule/interfaces/sdf.interface';
-// import { IGeneric } from '../interfaces/generic.inteface';
+import React, { useState, useEffect, ReactNode, ReactElement } from 'react';
 
-import React from 'react';
+interface IGeneric<T> {
+  state: T;
+  setState: (state: T) => void;
+  promise: Promise<T>;
+  children: ReactNode;
+}
 
-// export const GenericComponent = ({ state, setState, promise }: IGeneric<any>) => {
-//   const [isLoading, setIsLoading] = useState(false);
-//   const [isError, setIsError] = useState(false);
+interface ISlotProps {
+  slot: 'loading' | 'error' | 'content';
+}
 
-//   useEffect(() => {
-//     setIsLoading(true);
-//     const getData = async () => {
-//       try {
-//         const _sdf: ISdf = await promise;
-//         setState(_sdf);
-//         setIsLoading(false);
-//       } catch (error) {
-//         setIsError(true);
-//         setIsLoading(false);
-//       }
-//     };
+export const GenericComponent = <T,>({ state, setState, promise, children }: IGeneric<T>) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
-//     getData();
+  console.log(state);
 
-//     return () => {};
-//   }, []);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const result: T = await promise;
+        setState(result);
+        setIsLoading(false);
+      } catch (error) {
+        setIsError(true);
+        setIsLoading(false);
+      }
+    };
 
-//   if (isLoading) {
-//     return <div>Loading</div>;
-//   }
+    getData();
+  }, [promise, setState]);
 
-//   if (isError) {
-//     return <div>Error</div>;
-//   }
+  const getSlot = (slotName: 'loading' | 'error' | 'content') => {
+    return React.Children.map(children, (child) => {
+      if (React.isValidElement(child) && (child as ReactElement<ISlotProps>).props.slot === slotName) {
+        return child;
+      }
+      return null;
+    });
+  };
 
-//   return <div>{state}</div>;
-// };
+  if (isLoading) {
+    return <>{getSlot('loading')}</>;
+  }
 
-export const GenericComponent = () => {
-  return <div></div>;
+  if (isError) {
+    return <>{getSlot('error')}</>;
+  }
+
+  return <>{getSlot('content')}</>;
 };
