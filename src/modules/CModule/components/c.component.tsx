@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ISdf } from 'src/modules/AModule/interfaces/sdf.interface';
 import { TestComponent } from './test.component';
-import { httpClient } from '../../core/http-client/axios';
+import { HttpClient } from '../../core/http-client/axios';
 
 export const Component = () => {
   // const params = useParams();
@@ -44,7 +44,7 @@ export const Component = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        await httpClient.get('/backend/hello');
+        await HttpClient.getRequest<string>('/backend/hello');
       } catch (error) {
         console.log(error);
       }
