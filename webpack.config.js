@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CompressionPlugin = require("compression-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
@@ -13,8 +13,9 @@ module.exports = (env) => {
     devtool: isProductionMode ? false : 'inline-source-map',
     mode: isProductionMode ? 'production' : 'development',
     output: {
-      filename: '[name].[contenthash].js',
+      filename: isProductionMode ? '[name].[contenthash].js' : '[name].js',
       clean: true,
+      publicPath: '/',
       // path: path.resolve(__dirname, 'frontend_dist'), // custom output directory
     },
     module: {
@@ -63,17 +64,18 @@ module.exports = (env) => {
     },
     devServer: {
       static: path.resolve(__dirname, 'dist'),
+      historyApiFallback: true,
       open: true,
       hot: true,
-      proxy: [
-        {
-          context: ['/backend'],
-          target: 'http://localhost:3000/',
-          secure: false,
-          changeOrigin: true,
-          pathRewrite: { '^/backend': '' },
-        },
-      ],
+      // proxy: [
+      //   {
+      //     context: ['/backend'],
+      //     target: 'http://localhost:3000/',
+      //     secure: false,
+      //     changeOrigin: true,
+      //     pathRewrite: { '^/backend': '' },
+      //   },
+      // ],
     },
   }
 }

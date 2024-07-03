@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink, useLoaderData, useNavigate } from 'react-router-dom';
 import { RouterPath } from '../../core/enums/router-path.enum';
 import { ISdf } from '../interfaces/sdf.interface';
+import plan_logo from './plan_logo.png';
+import hyperplane from './hyperplane.svg';
 
 export const Component = () => {
   const navigate = useNavigate();
@@ -16,6 +18,8 @@ export const Component = () => {
 
   return (
     <div>
+      <img className="w-10 h-10" src={hyperplane}></img>
+      <img className="w-10 h-10" src={plan_logo}></img>
       <div>{sdf.sdf}</div>
       <button
         type="button"
