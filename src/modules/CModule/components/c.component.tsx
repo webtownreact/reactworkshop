@@ -44,7 +44,8 @@ export const Component = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        await HttpClient.getRequest<string>('/backend/hello');
+        const asd = await HttpClient.getRequest<string>('/backend/hello');
+        console.log(asd);
       } catch (error) {
         console.log(error);
       }

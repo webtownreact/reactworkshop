@@ -6,7 +6,7 @@ RUN npm install -g pnpm
 
 COPY ./ /app/
 RUN pnpm install
-RUN pnpm run build-prod
+RUN pnpm build-prod
 
 FROM nginx:stable-alpine
 COPY --from=build-stage /app/dist/ /usr/share/nginx/html

@@ -67,15 +67,15 @@ module.exports = (env) => {
       historyApiFallback: true,
       open: true,
       hot: true,
-      // proxy: [
-      //   {
-      //     context: ['/backend'],
-      //     target: 'http://localhost:3000/',
-      //     secure: false,
-      //     changeOrigin: true,
-      //     pathRewrite: { '^/backend': '' },
-      //   },
-      // ],
+      proxy: [
+       {
+           context: ['/backend'],
+           target: 'http://localhost:3000/',
+          secure: false,
+           changeOrigin: true,
+           pathRewrite: { '^/backend': '' },
+         },
+       ],
     },
   }
 }
