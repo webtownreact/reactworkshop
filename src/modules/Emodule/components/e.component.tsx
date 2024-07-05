@@ -1,12 +1,6 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 import { ThemeSwitcherComponent } from './theme-switcher.component';
-
-export interface IThemeContext {
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
-}
-
-export const ThemeContext = createContext<IThemeContext>({ theme: 'dark', setTheme: () => {} });
+import { ThemeContext } from '../contexts/theme.context';
 
 export const Component = () => {
   const [theme, setTheme] = useState('dark');

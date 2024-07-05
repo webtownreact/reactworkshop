@@ -1,10 +1,5 @@
-import React, { ReactElement } from 'react';
-
-export interface ITestComponent {
-  a: ReactElement;
-  b: ReactElement;
-  children: ReactElement;
-}
+import React from 'react';
+import { ITestComponent } from '../interfaces/test-component.interface';
 
 export const TestComponent = ({ a, b, children }: ITestComponent) => {
   return (

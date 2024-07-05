@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { NavLink, useLoaderData, useNavigate } from 'react-router-dom';
 import { RouterPath } from '../../core/enums/router-path.enum';
 import { ISdf } from '../interfaces/sdf.interface';
-import plan_logo from './plan_logo.png';
-import hyperplane from './hyperplane.svg';
+import plan_logo from '../../../../assets/plan_logo.png';
+import hyperplane from '../../../../assets/hyperplane.svg';
 
 export const Component = () => {
   const navigate = useNavigate();
@@ -12,9 +12,9 @@ export const Component = () => {
 
   const sdf: ISdf = useLoaderData() as ISdf;
 
-  const navigateToB: () => void = () => {
+  const navigateToB = useCallback(() => {
     navigate(`/${RouterPath.skeleton}/${RouterPath.b}`);
-  };
+  }, []);
 
   return (
     <div>

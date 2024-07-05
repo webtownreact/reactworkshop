@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, Route, createHashRouter, createRoutesFromElements } from 'react-router-dom';
 import { RouterPath } from '../enums/router-path.enum';
-import { TodoComponent } from '../components/todo.component';
+import { TodoComponent } from '../../TodoModule/components/todo.component';
 import { aLoader } from '../../AModule/loaders/a.loader';
 import { bLoader } from '../../BModule/loaders/b.loader';
 import { AuthGuard } from '../components/auth-guard';
@@ -40,7 +40,7 @@ export const router = createHashRouter(
         ></Route>
         <Route
           path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.e}`}
-          lazy={() => import('../../Emodule/e.component')}
+          lazy={() => import('../../Emodule/components/e.component')}
         ></Route>
         <Route
           path={`${RouterPath.slash}${RouterPath.skeleton}/${RouterPath.f}`}

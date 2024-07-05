@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { ITodo } from '../interfaces/todo.interface';
 import { todos as defaultTodos } from '../consts/todo.const';
 import { TodoItemComponent } from './todo-item.components';
@@ -6,7 +6,7 @@ import { TodoItemComponent } from './todo-item.components';
 export const TodoComponent = () => {
   const [todos, setTodos] = useState<ITodo[]>(defaultTodos);
 
-  const completeTodo: (id: number) => void = (id: number) => {
+  const completeTodo = useCallback((id: number) => {
     setTodos(
       todos.map((iTodo: ITodo) => {
         if (id === iTodo.id) {
@@ -19,9 +19,9 @@ export const TodoComponent = () => {
         return iTodo;
       }),
     );
-  };
+  }, []);
 
-  const unCompleteTodo: (id: number) => void = (id: number) => {
+  const unCompleteTodo = useCallback((id: number) => {
     setTodos(
       todos.map((iTodo: ITodo) => {
         if (id === iTodo.id) {
@@ -34,11 +34,11 @@ export const TodoComponent = () => {
         return iTodo;
       }),
     );
-  };
+  }, []);
 
-  const deleteTodo: (id: number) => void = (id: number) => {
+  const deleteTodo = useCallback((id: number) => {
     setTodos(todos.filter((iTodo: ITodo) => iTodo.id !== id));
-  };
+  }, []);
 
   return (
     <main className="container mx-auto grid grid-cols-1">

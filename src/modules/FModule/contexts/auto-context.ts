@@ -6,12 +6,9 @@ export const AutoContext = createContext<IAuto>({
   color: 'green',
   numberOfSeats: 4,
 });
+
 export const AutoDispatchContext = createContext<Dispatch<IAutoAction>>(() => {});
 
-export function useAuto() {
-  return useContext(AutoContext);
-}
+export const useAuto = () => useContext(AutoContext);
 
-export function useAutoDispatch() {
-  return useContext(AutoDispatchContext);
-}
+export const useAutoDispatch = () => useContext(AutoDispatchContext);
