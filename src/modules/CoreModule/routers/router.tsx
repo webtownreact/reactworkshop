@@ -59,6 +59,22 @@ export const router = createHashRouter(
           path={`${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.D}`}
           lazy={() => import('../../DModule/components/DComponent')}
         ></Route>
+        <Route
+          path={`${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.E}`}
+          lazy={() => import('../../EModule/components/EComponent')}
+        ></Route>
+        <Route
+          path={`${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.F}`}
+          lazy={() => import('../../FModule/components/FComponent')}
+        ></Route>
+        <Route
+          path={`${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.G}`}
+          lazy={() => import('../../GModule/components/GComponent')}
+        ></Route>
+        <Route
+          path={`${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.H}`}
+          lazy={() => import('../../HModule/components/HComponent')}
+        ></Route>
       </Route>
       <Route path={`${RouterPath.Slash}${RouterPath.NotFound}`} element={<div>not found</div>}></Route>
     </>,

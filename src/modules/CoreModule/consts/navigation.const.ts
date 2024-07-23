@@ -18,4 +18,20 @@ export const navigationConfig: INavigationConfig[] = [
     to: `${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.D}`,
     text: 'D component',
   },
+  {
+    to: `${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.E}`,
+    text: 'E component',
+  },
+  {
+    to: `${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.F}`,
+    text: 'F component',
+  },
+  {
+    to: `${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.G}`,
+    text: 'G component',
+  },
+  {
+    to: `${RouterPath.Slash}${RouterPath.Skeleton}/${RouterPath.H}`,
+    text: 'H component',
+  },
 ];

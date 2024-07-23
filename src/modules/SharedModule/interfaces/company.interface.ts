@@ -1,4 +1,4 @@
 export interface ICompany {
-  companyId: number;
-  companyName: string;
+  companyId?: number;
+  companyName?: string;
 }

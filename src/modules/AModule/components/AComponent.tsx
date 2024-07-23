@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { RouterPath } from '../../SharedModule/enums/RouterPath.enum';
 import { ICompany } from '../../SharedModule/interfaces/company.interface';
+import { CompanyComponent } from './CompanyComponent';
 import { Select } from './select';
 
 export const Component = () => {
@@ -64,6 +65,7 @@ export const Component = () => {
       </div>
       <div>{company?.companyId}</div>
       <div>{company?.companyName}</div>
+      <CompanyComponent company={company} setCompany={setCompany} />
       <Select
         label={'test select'}
         options={[
@@ -72,19 +74,19 @@ export const Component = () => {
         ]}
       ></Select>
       <h1>asdasdasddsdsadsads</h1>
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
-      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>{' '}
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
+      <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
       <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1> <h1>asdasdasddsdsadsads</h1>
       <button
         type="button"
