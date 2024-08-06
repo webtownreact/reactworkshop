@@ -1,6 +1,7 @@
 import './style.pcss';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import './src/i18n';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './src/modules/CoreModule/routers/router';
 // import { router } from './src/modules/core/routers/router';

@@ -71,7 +71,7 @@ module.exports = (env) => {
        {
            context: ['/backend'],
            target: 'http://localhost:3000/',
-          secure: false,
+           secure: false,
            changeOrigin: true,
            pathRewrite: { '^/backend': '' },
          },
